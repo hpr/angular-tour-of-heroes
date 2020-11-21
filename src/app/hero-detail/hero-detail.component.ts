@@ -32,4 +32,9 @@ import { Hero } from '../hero';
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
 }
